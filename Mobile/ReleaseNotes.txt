@@ -1,0 +1,23 @@
+Change Log
+==========
+**Build Number: 1.5**
+* Updated the UI with new custom font
+
+**Build Number: 1.4**
+* Fixed issues with authorization
+
+
+**Build Number: 1.3**
+* Minor bug fixes
+
+**Build Number: 1.2**
+* Updated the UI and integrated with Azure AD login
+
+**Build Number: 1.1**
+
+* Integrated build with HockeyApp
+* Added Release notes file to the release process
+
+
+
+

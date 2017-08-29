@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:common="clr-namespace:Contoso.Sales.Common;assembly=Contoso.Sales"
+                      xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+              xmlns:widget="clr-namespace:Contoso.Sales.Widgets;assembly=Contoso.Sales"
+             x:Class="Contoso.Sales.Pages.CheckQuota" Title="Quota" BackgroundColor="White">
+  <ScrollView>
+    <StackLayout VerticalOptions="FillAndExpand" Padding="0,20,0,0">
+      <StackLayout>
+        <controls:ExtendedLabel x:Name="lblWelcome" Style="{StaticResource LabelBold}"  VerticalOptions="Center" HorizontalOptions="Center" FontSize="22" />
+      </StackLayout>
+      <StackLayout  Padding="10">
+        <controls:ExtendedLabel x:Name="lblUserName" Style="{StaticResource LabelLight}" XAlign="Start" VerticalOptions="Start"/>
+      </StackLayout>
+      <StackLayout Padding="10,0,10,0" Spacing="2">
+        <controls:ExtendedLabel Text="Quota Information :" Style="{StaticResource LabelBold}" FontSize="18"/>
+        <StackLayout Spacing="0" Padding="0,10,0,0">
+        <widget:LabelEntryVertical x:Name="widgetTarget" LabelText="Target" IsEntryContentLeftAlign="true" IsLeftAlign="True"/>
+        </StackLayout>
+          <widget:LabelEntryVertical x:Name="widgetAchived" LabelText="Achieved" IsEntryContentLeftAlign="true" IsLeftAlign="True"/>
+        <Button Text="Go" x:Name="btnGo" BackgroundColor="Green" Style="{StaticResource BaseButtonStyle}"/>
+        <controls:ExtendedLabel Text="data updated successfully" Style="{StaticResource LabelLight}" TextColor="Blue" FontSize="16" x:Name="lblUpdationInfo" XAlign="Center"/>
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

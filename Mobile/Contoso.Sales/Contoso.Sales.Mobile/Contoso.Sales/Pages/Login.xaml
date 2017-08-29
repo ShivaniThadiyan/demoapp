@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Resource="clr-namespace:Contoso.Sales.Classes;assembly=Contoso.Sales"
+             xmlns:widget="clr-namespace:Contoso.Sales.Widgets;assembly=Contoso.Sales"
+                                   xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             x:Class="Contoso.Sales.Pages.Login" Title="Login" BackgroundColor="White">
+  <ScrollView BackgroundColor="Transparent" Padding="5" x:Name="scrollMain" VerticalOptions="FillAndExpand">
+    <StackLayout VerticalOptions="CenterAndExpand">
+      <StackLayout Padding="10">
+        <controls:ExtendedLabel  Text="Welcome to Contoso Sales" Style="{StaticResource LabelBold}" FontSize="25" XAlign="Center"/>
+      </StackLayout>
+      <StackLayout HorizontalOptions="CenterAndExpand" >
+        <Button x:Name="btnLogin"  Style="{StaticResource BaseButtonStyle}" Text="CLICK HERE TO LOGIN"/>
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

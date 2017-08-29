@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Common="clr-namespace:Contoso.Sales.Classes;assembly=Contoso.Sales"
+             x:Class="Contoso.Sales.App">
+  <Application.Resources>
+    <ResourceDictionary>
+      <!-- Application resource dictionary -->
+      <Style x:Key="LabledButtonStyle" TargetType="Button">
+        <Setter Property="TextColor" Value="{x:Static Common:ColorResources.LabledButtonTextColor}" />
+        <!--<Setter Property="Font" Value="{x:Static Common:FontResources.LabledButtonFontSize}" />-->
+        <Setter Property="BackgroundColor" Value="{x:Static Common:ColorResources.LabledButtonBackgroundColor}" />
+      </Style>
+      <Style x:Key="BaseButtonStyle" TargetType="Button">
+        <Setter Property="TextColor" Value="{x:Static Common:ColorResources.BaseButtonTextColor}" />
+        <!--<Setter Property="Font" Value="{x:Static Common:FontResources.BaseButtonFontSize}" />-->
+        <Setter Property="BackgroundColor" Value="{x:Static Common:ColorResources.BaseButtonBackgroundColor}" />
+      </Style>
+
+      <Style x:Key="HeaderLineStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{x:Static Common:ColorResources.HomePageHeaderLabelTextColor}" />
+        <Setter Property="Font" Value="{x:Static Common:FontResources.HomepageHeaderLabelFont}" />
+      </Style>
+      
+       <Style x:Key="EntryLabelLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{x:Static Common:ColorResources.EntryLabelTextColor}" />
+        <Setter Property="Font" Value="{x:Static Common:FontResources.EntryLabelFontSize}" />
+      </Style>
+      <Style x:Key="LabelLight" TargetType="Label">
+        <Setter Property="TextColor" Value="{x:Static Common:ColorResources.BaseLabelTextColor}" />
+        <Setter Property="Font" Value="{x:Static Common:FontResources.LabelValueVertical_ValueFont}" />
+      </Style>
+      <Style x:Key="LabelBold" TargetType="Label">
+        <Setter Property="TextColor" Value="{x:Static Common:ColorResources.BaseLabelTextColor}" />
+        <Setter Property="Font" Value="{x:Static Common:FontResources.LabelValueVertical_Bold}" />
+      </Style>
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>

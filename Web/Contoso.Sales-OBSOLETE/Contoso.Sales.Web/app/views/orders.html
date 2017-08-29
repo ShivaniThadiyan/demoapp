@@ -1,0 +1,42 @@
+﻿
+<div class="row" ng-controller="ordersController">
+    <div class="col-md-2">
+        &nbsp;
+    </div>
+    <div class="col-md-8">
+        <!--{{ orders.length }}-->
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Quota</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="order in orders">
+                    <td>
+                        {{ order.firstName }}
+                    </td>
+                    <td>
+                        {{ order.lastName }}
+                    </td>
+                    <td>
+                        {{ order.email }}
+                    </td>
+                    <td>
+                        <input type="text" ng-model="order.quota" />
+                    </td>
+                    <td>
+                        <button ng-click="updateQuota(order.email, order.quota)">Save Quota</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-2">
+        &nbsp;
+    </div>
+</div>

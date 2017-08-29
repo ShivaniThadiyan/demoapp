@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!--<link href="content/css/bootstrap.min.css" rel="stylesheet" />-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="content/css/site.css" rel="stylesheet" />
+    <link href="content/css/loading-bar.css" rel="stylesheet" />
+    <link href="content/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="content/css/social-buttons.css" rel="stylesheet" />
+    <link href="content/css/xeditable.css" rel="stylesheet" />
+    <link href="content/css/xeditable.min.css" rel="stylesheet" />
+
+    <style type="text/css">
+                /* Sticky footer styles
+        -------------------------------------------------- */
+                html {
+                    position: relative;
+                    min-height: 100%;
+                }
+
+                body {
+                    /* Margin bottom by footer height */
+                    margin-bottom: 60px;
+                }
+
+                .footer {
+                    position: absolute;
+                    bottom: 0;                    
+                    /* Set the fixed height of the footer here */
+                    height: 60px;                    
+                }
+    </style>
+    <title>Contoso Sales</title>
+
+</head>
+<body ng-app="todoApp" ng-controller="homeCtrl" role="document">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse"
+                        data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="navbar-brand" href="#/Home">ADAL JS Sample</a>-->
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+
+                    <li data-ng-hide="!userInfo.isAuthenticated"><a href="#">Welcome {{userInfo.userName}}</a></li>
+                    <!-- <li ng-class="{ active: isActive('/Home') }"><a href="#/Orders">Home</a></li>
+                     <li ng-class="{ active: isActive('/TodoList') }"><a href="#/TodoList">Todo List</a></li>-->
+                    <!--<li ng-class="{ active: isActive('/UserData') }"><a href="#/UserData" ng-show="userInfo.isAuthenticated">User</a></li>-->
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="btn btn-link" ng-show="userInfo.isAuthenticated" ng-click="logout()">Logout</a></li>
+                    <li><a class="btn btn-link" ng-hide="userInfo.isAuthenticated" ng-click="login()">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container" role="main">
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div class="page-header text-center">
+                    <h1>Welcome to Contoso Sales</h1>
+
+                    <!--{{userInfo}}-->
+                </div>
+                <!--<p>This sample demonstrates how to take advantage of ADAL JS for adding Azure AD authentication to your AngularJS apps.</p>-->
+            </div>
+        </div>
+        <div class="row">
+            <div ng-view />
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-muted">&copy; Contoso Sales {{yearVariable}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.25/angular-route.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="App/Scripts/adal.js"></script>
+    <script src="App/Scripts/adal-angular.js"></script>
+    <script src="App/Scripts/app.js"></script>
+    <script src="App/Scripts/homeCtrl.js"></script>
+    <script src="App/Scripts/userDataCtrl.js"></script>
+    <script src="App/Scripts/todoListCtrl.js"></script>
+    <script src="App/Scripts/todoListSvc.js"></script>
+    <script src="App/services/ordersService.js"></script>
+    <script src="App/Controllers/ordersController.js"></script>
+
+</body>
+</html>
